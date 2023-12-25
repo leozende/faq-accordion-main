@@ -14,6 +14,10 @@ body{
     background-color: hsl(275, 100%, 97%);
 }
 
+hr{
+    margin-top: 20px;
+}
+
 .attribution {
     margin-top: 50px;
     font-size: 11px; 
