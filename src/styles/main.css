@@ -28,7 +28,7 @@ hr{
     color: hsl(228, 45%, 44%); 
 }
 
-.faq__container{
+.faq{
     width: 310px;
     background-color: hsl(0, 0%, 100%);
     padding: 20px;
@@ -47,11 +47,11 @@ hr{
     height: 30px;
 }
 
-.faq-questions{
+.faq-questions > ul{
     list-style: none;
 }
 
-.faq-questions > li{
+.faq-questions > ul > li{
     display: flex;
     flex-direction: column;
     margin: 20px 0px;
@@ -63,35 +63,38 @@ hr{
     align-items: center;
 }
 
-.faq-question__title{
+.faq-question-title{
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
 }
 
-.faq-question__title > h2{
-    cursor: pointer;
+.faq-question-title > h2{
     margin-right: 12%;
     font-size: 18px;
 }
 
-.faq-question__title>h2:focus,
-.faq-question__title>h2:hover{
+.faq-question-title>h2:focus,
+.faq-question-title>h2:hover{
     color: #AD28EB;
 }
 
 
 
 .faq-question>p {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
     font-size: 16px;
-    margin-top: 20px;
     color: hsl(292, 16%, 49%);
 }
 
-.active{
-    display: none;
+.faq-question>p.active{
+    margin-top: 20px;
+    max-height: 400px;
 }
 
 @media only screen and (min-width: 375px) {
@@ -99,14 +102,14 @@ hr{
     body{
         background-image: url(../../assets/images/background-pattern-desktop.svg);
     }
-    .faq__container{
+    .faq{
         width: 80%;
     }
 
 }
 
 @media only screen and (min-width: 700px) {
-    .faq__container{
+    .faq{
         width: 600px;
     }
 }
